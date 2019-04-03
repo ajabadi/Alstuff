@@ -7,8 +7,8 @@
 #' @return if any files are missing, will produce an error mentioning the files
 #' @export
 #' @keywords file check
-#' @example
-#' check_files_exist(c('~/.Rprofile','~/.Rhistory', './Non_existent.tff'))
+#' @examples
+#' \dontrun{check_files-exist('~/.Rprofile')}
 ###### You can have a family of function to see in see also
 #' @family file_recorder
 check_files_exist = function(input_list){

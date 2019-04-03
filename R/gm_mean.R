@@ -7,9 +7,8 @@
 #' @return wgeometric mean of the vector
 #' @export gm_mean
 #' @keywords geometric mean
-#' @example
-#' gm_mean(c(1,1,125))
-#' ## 5
+#' @examples
+#' \dontrun{gm_mean(c(1,1,125))}
 #' @family mean
 
 gm_mean = function(x, na.rm=TRUE){
