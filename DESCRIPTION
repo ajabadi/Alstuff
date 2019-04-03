@@ -1,0 +1,15 @@
+Package: someWrappers
+Type: Package
+Title: My personal functions and wrappers
+Version: 0.1.0
+Author: Al J Abadi
+Maintainer: Al J Abadi <yaljabadi@gmail.com>
+Description: Extensive range of function and wrappers for data analysis etc.
+Depends: R (>= 3.5.0)
+Imports: tools, grDevices
+Suggests: knitr, testthat, rmarkdown
+License: GPL-3
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+LazyData: true
+RoxygenNote: 6.1.1
