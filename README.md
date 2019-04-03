@@ -1,13 +1,13 @@
-My persoanl functions and wrappers. Not recommended for public use.
+My personal functions and wrappers. Not recommended for public use.
 
 # roxygen2_template.R
-A template for package R files in \code{./R}, already including most of \code{roxygen2} arguments.
+A template for package R files in _./R_, already including most of _roxygen2_ arguments.
 
 # roxygenise.R
 Manual test, build and installation for more control. Self-contained.
 
 # tests
-package test files. the ones in \code{/manual} to be run using \code{roxygenise.R}.
+package test files. the ones in _./tests/manual_ to be run using _./roxygenise.R_.
 
 # R
 Contains all R functions, names begin with the function/wrapper category. Anything not exported is used only internally.
@@ -29,4 +29,4 @@ Wrapper and function examples
 To be updated with any package dependency/import added
 
 # NAMESPACE
-Managed by \code{roxygen2}
+Managed by _roxygen2_.

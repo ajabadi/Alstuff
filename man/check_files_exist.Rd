@@ -15,6 +15,9 @@ if any files are missing, will produce an error mentioning the files
 \description{
 Check input files exist
 }
+\examples{
+\dontrun{check_files-exist('~/.Rprofile')}
+}
 \author{
 Al J Abadi, \email{aljalabadi@gmail.com}
 }

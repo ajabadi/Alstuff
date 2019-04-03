@@ -18,6 +18,9 @@ Geometric Mean
 \details{
 Calculate the geometric mean of a numeric vector
 }
+\examples{
+\dontrun{gm_mean(c(1,1,125))}
+}
 \author{
 Al J Abadi, \email{aljalabadi@gmail.com}
 }
