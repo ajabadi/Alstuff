@@ -32,6 +32,7 @@ hist_cut_color <- function(x=rnorm(2000, mean = 0, sd = 10),
   # plot(hist, col=cols[cuts],...)
   n_cols <- length(cutoff)+1
   df <- data.frame(x=x, cuts=cut(x, dput(c(-Inf,cutoff,Inf))))
-  ggplot(df, aes(x, fill=cuts),...) + geom_histogram(bins=n_bins) + theme_bw() +
-    scale_fill_manual(guide_legend(legend_title), labels = legend_labels, values=cols[1:n_cols])
+  ggplot(df, aes(x, fill=cuts)) + geom_histogram(bins=n_bins) + theme_bw() +
+    scale_fill_manual(guide_legend(legend_title), labels = legend_labels, values=cols[1:n_cols]) +
+    labs(...)
 }
