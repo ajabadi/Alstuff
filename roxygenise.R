@@ -1,3 +1,4 @@
+setwd('/Users/alabadi/Documents/_Projects/_Personal/someWrappers')
 ############# build all documentation for the package and update namespace
 roxygen2::roxygenise()
 ############# load the pks to access functions
@@ -12,7 +13,7 @@ testthat::test_example("man/parent_base_ext.Rd")
 ## test files that cannot be included in standard testthat pipeline
 invisible(lapply(list.files("tests/manual", full.names = TRUE), source))
 ############# check
-devtools::check()
+# devtools::check()
 ############# build it
 ## by default, it is made in parent directoy of the package, we manually set it.
 binary_dir <- "../__binary"
