@@ -3,7 +3,7 @@
 #' Partition histogram by color - output is a ggplot2 object which can be extended using \code{labs} etc
 #' @author Al J Abadi, \email{aljalabadi@@gmail.com}
 #' @title Histogram color partitioner
-#' @param x a numeric vector
+#' @param vec a numeric vector
 #' @param cutoff numeric valu(s) of cut points (atomic or vector)
 #' @param cols vector of colors to use, if NULL, \code{gg_color_hue(length(cutoff)+1)} will be used
 #' @param legend_title title of the legend
@@ -18,7 +18,7 @@
 #' @examples hist_cut_color() + labs(x='X label here', title='Main title here')
 #' @family hist
 
-hist_cut_color <- function(x=rnorm(2000, mean = 0, sd = 10),
+hist_cut_color <- function(vec=rnorm(2000, mean = 0, sd = 10),
                            cutoff = c(-10,-3,3, 10),
                            cols=c('red', 'green', 'orange','yellow','purple'),
                            legend_title='QC',
@@ -31,8 +31,8 @@ hist_cut_color <- function(x=rnorm(2000, mean = 0, sd = 10),
   # cuts <- cut(hist$breaks, dput(c(-Inf,cutoff,Inf)))
   # plot(hist, col=cols[cuts],...)
   n_cols <- length(cutoff)+1
-  df <- data.frame(x=x, cuts=cut(x, dput(c(-Inf,cutoff,Inf))))
-  ggplot(df, aes(x, fill=cuts)) + geom_histogram(bins=n_bins) + theme_bw() +
+  df <- data.frame(x=vec, cuts=cut(vec, dput(c(-Inf,cutoff,Inf))))
+  ggplot(df, aes(vec, fill=cuts)) + geom_histogram(bins=n_bins) + theme_bw() +
     scale_fill_manual(guide_legend(legend_title), labels = legend_labels, values=cols[1:n_cols]) +
     labs(...)
 }
