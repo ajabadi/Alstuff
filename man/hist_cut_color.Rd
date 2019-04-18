@@ -4,13 +4,13 @@
 \alias{hist_cut_color}
 \title{Histogram color partitioner}
 \usage{
-hist_cut_color(x = rnorm(2000, mean = 0, sd = 10), cutoff = c(-10, -3,
-  3, 10), cols = c("red", "green", "orange", "yellow", "purple"),
+hist_cut_color(vec = rnorm(2000, mean = 0, sd = 10), cutoff = c(-10,
+  -3, 3, 10), cols = c("red", "green", "orange", "yellow", "purple"),
   legend_title = "QC", legend_labels = c("Filtered", "Passed",
   "orange", "yellow", "purple"), n_bins = 200, ...)
 }
 \arguments{
-\item{x}{a numeric vector}
+\item{vec}{a numeric vector}
 
 \item{cutoff}{numeric valu(s) of cut points (atomic or vector)}
 
