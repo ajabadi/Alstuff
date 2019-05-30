@@ -1,8 +1,10 @@
-#' Move a file/folder and symlink
+#' Move a file/folder to external drive in similar external directory and create a symlink in local
 #'
 #' @author Al J Abadi, \email{aljalabadi@@gmail.com}
 #' @title file transferer
 #' @param path full path to the file/folder (~ not allowed)
+#' @param external full path to the external directory replacing top level in 'path'
+#' @param home the top level directory from local to be replaced by 'external' for external backup
 #' @return copies the files folder in a replicate directory in external and symlinks
 #' @export
 
@@ -10,7 +12,7 @@ move_symlink <-  function(path='/Users/alabadi/Downloads/trash', external='/Volu
 
   if(!dir.exists(external)) stop('invalid external directory')
   if(!dir.exists(home)) stop('invalid home directory')
-  
+
   ext_path <- gsub(home, external, path)
 
 ################## FOLDER
@@ -25,7 +27,7 @@ if(dir.exists(path)){
   unlink(path, recursive = TRUE)
   ## symlink
   file.symlink(ext_path, path)
-  
+
   ################## FILE
 } else if(file.exists(path)){
   ## ensure the directory exists
