@@ -1,10 +1,12 @@
 ####### This file cannot be tested in usual way as it performs dir and file creation/deletion
 #' Back up a file in external hard drive
 #'
-#' Backs up in external hard drive in a folder path identical to that on local computer
+#' Backs up in either 1../__backup folder or
+#' 2. in anotehr (external hard drive) folder path identical to that on local computer or
+#' 3. in another (external hard drive) folder
 #' @author Al J Abadi, \email{aljalabadi@gmail.com}
-#' @title file backup
-#' @param file The file to be recorded - relative or full path - assumes it's a full path of it contains 'Users'.
+#' @title backup files - usually data files before being overwritten
+#' @param file The file to be recorded - relative or full path - assumes it's a full path only if it starts with '/'.
 #' @param where Backup scheme: 1. NA: In ./backup folder of working directory.
 #' 2. 'path': Full path to the folder where a copy of the file and its log will be stored.
 #' @param date_ext Subset of \code{c("year","month","day", "hour", "minute")} - details of the renamed file
@@ -34,7 +36,7 @@ file_backup <- function(file,
   }
 
   ## backup name
-  if(!grepl(pattern = 'Users', file)){
+  if(substring(file,0,1)!="/"){
     file <- R.utils::filePath(getwd(), file)
   }
   lst <- parent_base_ext(file)
