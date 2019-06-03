@@ -9,12 +9,16 @@ move_symlink(path = "/Users/alabadi/Downloads/trash",
 }
 \arguments{
 \item{path}{full path to the file/folder (~ not allowed)}
+
+\item{external}{full path to the external directory replacing top level in 'path'}
+
+\item{home}{the top level directory from local to be replaced by 'external' for external backup}
 }
 \value{
 copies the files folder in a replicate directory in external and symlinks
 }
 \description{
-Move a file/folder and symlink
+Move a file/folder to external drive in similar external directory and create a symlink in local
 }
 \author{
 Al J Abadi, \email{aljalabadi@gmail.com}

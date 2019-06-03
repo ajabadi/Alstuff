@@ -2,19 +2,20 @@
 % Please edit documentation in R/file_backup.R
 \name{file_backup}
 \alias{file_backup}
-\title{file backup}
+\title{backup files - usually data files before being overwritten}
 \usage{
 file_backup(file, where = "/Volumes/0414861919/Mac_backup",
-  date_ext = c("year", "month", "day"), run_spec = "New run",
+  date_ext = c("year", "month", "day"),
+  run_spec = "Description of the latest changes you made",
   toplevel = NA)
 }
 \arguments{
-\item{file}{The file to be recorded - full path from the working directory (e.g. ../data.dat).}
+\item{file}{The file to be recorded - relative or full path - assumes it's a full path only if it starts with '/'.}
 
 \item{where}{Backup scheme: 1. NA: In ./backup folder of working directory.
 2. 'path': Full path to the folder where a copy of the file and its log will be stored.}
 
-\item{date_ext}{Subset of \code{c("year","month","day", "hour", "hour", "minute")} - details of the renamed file}
+\item{date_ext}{Subset of \code{c("year","month","day", "hour", "minute")} - details of the renamed file}
 
 \item{run_spec}{Specification of the run whose output will replace the current one.}
 
@@ -27,7 +28,9 @@ backs up a renamed version of the file and logs the record.
 Back up a file in external hard drive
 }
 \details{
-Backs up in external hard drive in a folder path identical to that on local computer
+Backs up in either 1../__backup folder or
+2. in anotehr (external hard drive) folder path identical to that on local computer or
+3. in another (external hard drive) folder
 }
 \author{
 Al J Abadi, \email{aljalabadi@gmail.com}
