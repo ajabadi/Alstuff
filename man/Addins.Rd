@@ -2,9 +2,12 @@
 % Please edit documentation in R/Addins.R
 \name{insertInAddin}
 \alias{insertInAddin}
+\alias{insert2wayPipe}
 \title{magrittr operator addins for RStudio}
 \usage{
-insertInAddin()
+{(Add to RStudio keyboard shortcuts)}
+
+{(Add to RStudio keyboard shortcuts)}
 }
 \description{
 Go to Tools > 'Modify Keybaord Shortcuts' toadd custom shortcuts after installing it.
