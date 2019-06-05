@@ -3,8 +3,11 @@
 \name{insertInAddin}
 \alias{insertInAddin}
 \alias{insert2wayPipe}
+\alias{+}
 \title{magrittr operator addins for RStudio}
 \usage{
+{(Add to RStudio keyboard shortcuts)}
+
 {(Add to RStudio keyboard shortcuts)}
 
 {(Add to RStudio keyboard shortcuts)}

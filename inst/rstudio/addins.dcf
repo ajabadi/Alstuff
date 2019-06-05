@@ -9,3 +9,9 @@ Name: Insert %<>% .[
 Description: Inserts `%<>% .[` at the cursor position. You can remove the `.[` if it is not a subset operation faster than adding it if it is, hence the iclusion.
 Binding: insert2wayPipe
 Interactive: false
+
+##------------------------------{SPACE}+{SPACE}
+Name: Insert SPACE+SPACE
+Description: Inserts ` + ` (plus sign with spaces on both side) at the cursor position.
+Binding: ` + `
+Interactive: false

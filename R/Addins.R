@@ -16,6 +16,16 @@ insertInAddin <- function() {
 #'@rdname Addins
 #'@usage {(Add to RStudio keyboard shortcuts)}
 #'@export
+
 insert2wayPipe <- function() {
-  insertText(" %<>%  .[")
+  insertText(" %<>% .[")
+}
+
+
+#'@importFrom rstudioapi insertText
+#'@rdname Addins
+#'@usage {(Add to RStudio keyboard shortcuts)}
+#'@export
+` + ` <- function(){
+  insertText(" + ")
 }
