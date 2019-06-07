@@ -13,5 +13,5 @@ Interactive: false
 ##------------------------------{SPACE}+{SPACE}
 Name: Insert SPACE+SPACE
 Description: Inserts ` + ` (plus sign with spaces on both side) at the cursor position.
-Binding: ` + `
+Binding: plus
 Interactive: false

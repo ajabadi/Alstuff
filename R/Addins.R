@@ -26,6 +26,6 @@ insert2wayPipe <- function() {
 #'@rdname Addins
 #'@usage {(Add to RStudio keyboard shortcuts)}
 #'@export
-` + ` <- function(){
+plus <- function(){
   insertText(" + ")
 }
