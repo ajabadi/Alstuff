@@ -4,10 +4,13 @@
 \alias{install_pkgs}
 \title{Install a list of packages in R}
 \usage{
-install_pkgs(pkgs, max_size = 1e+06)
+install_pkgs(pkgs = NULL, dirpath = NULL, max_size = 1e+06)
 }
 \arguments{
 \item{pkgs}{a character vector of packages}
+
+\item{dirpath}{the path to a R/Rmd file containing librar() and/or require() statments, or to the /Resources/library directory
+of another R version}
 
 \item{max_size}{size (in bytes) beyond which the pkg will not be installed}
 }
@@ -17,3 +20,7 @@ a data.frame containing successfull and failed/non-installation info
 \description{
 Install a list of packages in R
 }
+\seealso{
+Other misc: \code{\link{insertInAddin}}
+}
+\concept{misc}

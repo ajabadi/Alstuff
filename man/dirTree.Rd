@@ -16,3 +16,9 @@ dirTree(Dir, depth = 2, plot = FALSE)
 \description{
 creates a dendogram of subdirectories down to a given depth. Plus a tree plot.
 }
+\seealso{
+Other file: \code{\link{check_files_exist}},
+  \code{\link{file_backup}}, \code{\link{move_symlink}},
+  \code{\link{parent_base_ext}}
+}
+\concept{file}

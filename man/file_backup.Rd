@@ -32,6 +32,12 @@ Backs up in either 1../__backup folder or
 2. in anotehr (external hard drive) folder path identical to that on local computer or
 3. in another (external hard drive) folder
 }
+\seealso{
+Other file: \code{\link{check_files_exist}},
+  \code{\link{dirTree}}, \code{\link{move_symlink}},
+  \code{\link{parent_base_ext}}
+}
 \author{
 Al J Abadi, \email{aljalabadi@gmail.com}
 }
+\concept{file}

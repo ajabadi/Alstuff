@@ -7,7 +7,7 @@
 #'
 #' @return a data.frame containing successfull and failed/non-installation info
 #' @export install_pkgs
-
+#' @family misc
 install_pkgs <- function(pkgs=NULL, dirpath=NULL, max_size = 1000000) {
   #### if path to a file given ---------------------------------------
   if(is.null(pkgs) & !is.null(dirpath)){

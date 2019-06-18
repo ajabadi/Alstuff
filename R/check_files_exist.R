@@ -10,7 +10,7 @@
 #' @examples
 #' \dontrun{check_files-exist('~/.Rprofile')}
 ###### You can have a family of function to see in see also
-#' @family file_recorder
+#' @family file
 check_files_exist = function(input_list){
 
   ##INPUT file_list: list of full file names (including directory)

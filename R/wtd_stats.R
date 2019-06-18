@@ -10,7 +10,7 @@
 #' @export wtd_var
 #' @export wtd_mean
 #' @references \url{https://github.com/harrelfe/Hmisc/blob/master/man/wtd.stats.Rd}
-
+#' @family stats
 ### Weighted Variance
 wtd_var <- function (x, weights = NULL, normwt = FALSE, na.rm = TRUE, method = c("unbiased",
                                                                                  "ML"))

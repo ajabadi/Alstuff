@@ -22,9 +22,14 @@ Option to get the file base name without extensions (e.g. .txt)
 \dontrun{parent_base_ext("directory/file.extension")}
 
 }
+\seealso{
+Other file: \code{\link{check_files_exist}},
+  \code{\link{dirTree}}, \code{\link{file_backup}},
+  \code{\link{move_symlink}}
+}
 \author{
 Al J Abadi, \email{aljalabadi@gmail.com}
 }
-\concept{basename}
+\concept{file}
 \keyword{basename}
 \keyword{extension}

@@ -11,7 +11,7 @@
 #' @import ggplot2
 #' @export
 #' @example ./examples/gg_color_hue_example.R
-
+#' @family plot
 gg_color_hue <- function(n) {
   hues = seq(15, 375, length = n + 1)
   grDevices::hcl(h = hues, l = 65, c = 100)[1:n]

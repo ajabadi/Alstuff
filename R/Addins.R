@@ -4,6 +4,8 @@
 #'
 #'@references \url{https://rstudio.github.io/rstudioaddins/}
 #'@importFrom rstudioapi insertText
+#'@family misc
+
 #'@rdname Addins
 #'@usage {(Add to RStudio keyboard shortcuts)}
 #'@export

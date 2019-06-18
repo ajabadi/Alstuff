@@ -21,6 +21,10 @@ A detailed description
 \references{
 \url{https://github.com/harrelfe/Hmisc/blob/master/man/wtd.stats.Rd}
 }
+\seealso{
+Other stats: \code{\link{gm_mean}}
+}
 \author{
 Frank Harrell , Benjamin Tyner
 }
+\concept{stats}

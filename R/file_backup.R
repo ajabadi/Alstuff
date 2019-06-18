@@ -14,7 +14,7 @@
 #' @param toplevel toplevel directory to replace with \code{where}. NA by default.
 #' @return backs up a renamed version of the file and logs the record.
 #' @export
-
+#' @family file
 file_backup <- function(file,
                         where='/Volumes/0414861919/Mac_backup',
                         date_ext=c("year","month","day"),

@@ -21,9 +21,12 @@ Calculate the geometric mean of a numeric vector
 \examples{
 \dontrun{gm_mean(c(1,1,125))}
 }
+\seealso{
+Other stats: \code{\link{wtd_var}}
+}
 \author{
 Al J Abadi, \email{aljalabadi@gmail.com}
 }
-\concept{mean}
+\concept{stats}
 \keyword{geometric}
 \keyword{mean}

@@ -8,7 +8,7 @@
 #'@importFrom stringr str_count
 #'@importFrom data.tree as.Node
 #'@importFrom plyr rbind.fill
-#'
+#'@family file
 #'@export dirTree
 
 dirTree <- function(Dir, depth=2, plot=FALSE){

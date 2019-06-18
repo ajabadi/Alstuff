@@ -7,7 +7,7 @@
 #' @param home the top level directory from local to be replaced by 'external' for external backup
 #' @return copies the files folder in a replicate directory in external and symlinks
 #' @export
-
+#' @family file
 move_symlink <-  function(path='/Users/alabadi/Downloads/trash', external='/Volumes/0414861919/Mac_Home', home='/Users/alabadi'){
 
   if(!dir.exists(external)) stop('invalid external directory')

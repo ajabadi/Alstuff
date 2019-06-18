@@ -11,7 +11,7 @@
 #' @examples
 #' \dontrun{parent_base_ext("directory/file.extension")}
 #'
-#' @family basename
+#' @family file
 
 parent_base_ext <- function(filePath){
 

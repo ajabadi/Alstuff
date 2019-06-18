@@ -16,7 +16,7 @@
 #' @export
 #' @keywords histogram
 #' @examples hist_cut_color() + labs(x='X label here', title='Main title here')
-#' @family hist
+#' @family plot
 
 hist_cut_color <- function(vec=rnorm(2000, mean = 0, sd = 10),
                            cutoff = c(-10,-3,3, 10),
@@ -27,9 +27,7 @@ hist_cut_color <- function(vec=rnorm(2000, mean = 0, sd = 10),
   if(is.null(cols)){
     cols <- gg_color_hue(length(cutoff)+1)
   }
-  # hist <- hist(x, plot=FALSE,...)
-  # cuts <- cut(hist$breaks, dput(c(-Inf,cutoff,Inf)))
-  # plot(hist, col=cols[cuts],...)
+
   n_cols <- length(cutoff)+1
   df <- data.frame(x=vec, cuts=cut(vec, dput(c(-Inf,cutoff,Inf))))
   ggplot(df, aes(vec, fill=cuts)) + geom_histogram(bins=n_bins) + theme_bw() +

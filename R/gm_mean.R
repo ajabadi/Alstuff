@@ -9,7 +9,7 @@
 #' @keywords geometric mean
 #' @examples
 #' \dontrun{gm_mean(c(1,1,125))}
-#' @family mean
+#' @family stats
 
 gm_mean = function(x, na.rm=TRUE){
   exp(sum(log(x[x > 0]), na.rm=na.rm) / length(x))

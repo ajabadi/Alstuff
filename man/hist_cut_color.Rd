@@ -36,8 +36,11 @@ Partition histogram by color - output is a ggplot2 object which can be extended 
 \examples{
 hist_cut_color() + labs(x='X label here', title='Main title here')
 }
+\seealso{
+Other plot: \code{\link{gg_color_hue}}
+}
 \author{
 Al J Abadi, \email{aljalabadi@gmail.com}
 }
-\concept{hist}
+\concept{plot}
 \keyword{histogram}

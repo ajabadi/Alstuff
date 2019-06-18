@@ -20,6 +20,12 @@ copies the files folder in a replicate directory in external and symlinks
 \description{
 Move a file/folder to external drive in similar external directory and create a symlink in local
 }
+\seealso{
+Other file: \code{\link{check_files_exist}},
+  \code{\link{dirTree}}, \code{\link{file_backup}},
+  \code{\link{parent_base_ext}}
+}
 \author{
 Al J Abadi, \email{aljalabadi@gmail.com}
 }
+\concept{file}

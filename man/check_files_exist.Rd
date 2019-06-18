@@ -18,9 +18,14 @@ Check input files exist
 \examples{
 \dontrun{check_files-exist('~/.Rprofile')}
 }
+\seealso{
+Other file: \code{\link{dirTree}},
+  \code{\link{file_backup}}, \code{\link{move_symlink}},
+  \code{\link{parent_base_ext}}
+}
 \author{
 Al J Abadi, \email{aljalabadi@gmail.com}
 }
-\concept{file_recorder}
+\concept{file}
 \keyword{check}
 \keyword{file}
