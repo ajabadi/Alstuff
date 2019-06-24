@@ -35,7 +35,8 @@ Backs up in either 1../__backup folder or
 \seealso{
 Other file: \code{\link{check_files_exist}},
   \code{\link{dirTree}}, \code{\link{move_symlink}},
-  \code{\link{parent_base_ext}}
+  \code{\link{parent_base_ext}}, \code{\link{saveRDS}},
+  \code{\link{suffixer}}
 }
 \author{
 Al J Abadi, \email{aljalabadi@gmail.com}

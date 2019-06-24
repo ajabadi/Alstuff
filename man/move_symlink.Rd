@@ -23,7 +23,8 @@ Move a file/folder to external drive in similar external directory and create a 
 \seealso{
 Other file: \code{\link{check_files_exist}},
   \code{\link{dirTree}}, \code{\link{file_backup}},
-  \code{\link{parent_base_ext}}
+  \code{\link{parent_base_ext}}, \code{\link{saveRDS}},
+  \code{\link{suffixer}}
 }
 \author{
 Al J Abadi, \email{aljalabadi@gmail.com}

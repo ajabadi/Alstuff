@@ -21,7 +21,8 @@ Check input files exist
 \seealso{
 Other file: \code{\link{dirTree}},
   \code{\link{file_backup}}, \code{\link{move_symlink}},
-  \code{\link{parent_base_ext}}
+  \code{\link{parent_base_ext}}, \code{\link{saveRDS}},
+  \code{\link{suffixer}}
 }
 \author{
 Al J Abadi, \email{aljalabadi@gmail.com}

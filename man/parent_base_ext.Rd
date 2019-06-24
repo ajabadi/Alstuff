@@ -25,7 +25,8 @@ Option to get the file base name without extensions (e.g. .txt)
 \seealso{
 Other file: \code{\link{check_files_exist}},
   \code{\link{dirTree}}, \code{\link{file_backup}},
-  \code{\link{move_symlink}}
+  \code{\link{move_symlink}}, \code{\link{saveRDS}},
+  \code{\link{suffixer}}
 }
 \author{
 Al J Abadi, \email{aljalabadi@gmail.com}
