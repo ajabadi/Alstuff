@@ -33,9 +33,10 @@ Backs up in either 1../__backup folder or
 3. in another (external hard drive) folder
 }
 \seealso{
-Other file: \code{\link{check_files_exist}},
-  \code{\link{dirTree}}, \code{\link{move_symlink}},
-  \code{\link{parent_base_ext}}, \code{\link{saveRDS}},
+Other file: \code{\link{R2Excel}},
+  \code{\link{check_files_exist}}, \code{\link{dirTree}},
+  \code{\link{move_symlink}},
+  \code{\link{parent_base_ext}}, \code{\link{saveRDS2}},
   \code{\link{suffixer}}
 }
 \author{

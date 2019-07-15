@@ -2,26 +2,26 @@
 % Please edit documentation in R/check_files_exist.R
 \name{check_files_exist}
 \alias{check_files_exist}
-\title{File checker}
+\title{input/ouput checker}
 \usage{
-check_files_exist(input_list)
+check_files_exist(io_list)
 }
 \arguments{
-\item{file_list}{vector of full paths to files}
+\item{io_list}{list of input/output files/directories}
 }
 \value{
-if any files are missing, will produce an error mentioning the files
+if any files/directories are missing, will produce an error mentioning the missing ones
 }
 \description{
-Check input files exist
+check input/ouput file/directories are valid
 }
 \examples{
-\dontrun{check_files-exist('~/.Rprofile')}
+\dontrun{check_files-exist(list('~/.Rprofile'))}
 }
 \seealso{
-Other file: \code{\link{dirTree}},
+Other file: \code{\link{R2Excel}}, \code{\link{dirTree}},
   \code{\link{file_backup}}, \code{\link{move_symlink}},
-  \code{\link{parent_base_ext}}, \code{\link{saveRDS}},
+  \code{\link{parent_base_ext}}, \code{\link{saveRDS2}},
   \code{\link{suffixer}}
 }
 \author{
