@@ -4,10 +4,11 @@ roxygen2::roxygenise()
 ############# load the pks to access functions
 devtools::load_all()
 ############# testthat
-testthat::test_package("Alstuffs")
+testthat::test_package("Alstuff")
 ############# test examples
 ## path to Rd files - will let you know if there are any errors/warnings
 testthat::test_example("man/parent_base_ext.Rd")
+testthat::test_example("man/R2Excel.Rd")
 ############# manual tests
 ## test files that cannot be included in standard testthat pipeline
 invisible(lapply(list.files("tests/manual", full.names = TRUE), source))
