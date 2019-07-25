@@ -21,10 +21,10 @@ copies the files folder in a replicate directory in external and symlinks
 Move a file/folder to external drive in similar external directory and create a symlink in local
 }
 \seealso{
-Other file: \code{\link{check_files_exist}},
-  \code{\link{dirTree}}, \code{\link{file_backup}},
-  \code{\link{parent_base_ext}}, \code{\link{saveRDS}},
-  \code{\link{suffixer}}
+Other file: \code{\link{R2Excel}},
+  \code{\link{check_files_exist}}, \code{\link{dirTree}},
+  \code{\link{file_backup}}, \code{\link{parent_base_ext}},
+  \code{\link{saveRDS2}}, \code{\link{suffixer}}
 }
 \author{
 Al J Abadi, \email{aljalabadi@gmail.com}

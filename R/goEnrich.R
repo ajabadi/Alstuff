@@ -14,32 +14,31 @@
 #' @param mapping "org.Mm.eg.db" or "org.Hs.eg.db" package must be loaded
 #' @param subset subset of genes, if NULL signature used
 #' @param feas_genes feasible genes, if NULL all matrix colnames used
-#' @param colz colors for non-matching and matching terms
+#' @param col colors for non-matching and matching terms
 #' @import topGO
 #' @rdname goEnrich
 #' @return a GO term enrichment plot
 
 #'
-
-GOget <- function(spls.obj, dat, comp, ID="symbol", nodeSize=10,
+#' @export
+GOget <- function(spls.obj, dat, comps=1:2, ID="symbol", nodeSize=10,
                       mapping="org.Mm.eg.db", subset=NULL, feas_genes= NULL){
 
-  if(is.null(colz)){
-    ## different colors for terms list
-    cm <-  color.mixo(c(1,2,4,5))
-    colz <-c('grey40', cm[seq_along(trms)])
-  }
-  ## first color for no match
-  if(length(colz)!=(1+length(trms)))
-    stop("colz of not correct length")
 
 
   ## if feasible genes not supplied
   if(is.null(feas_genes)){
     ## a named vector of markers loadings
-    if(!dat %in% names(spls.obj$X))
-      stop('invalid omic name')
-    feas_genes <- spls.obj$loadings[[dat]][,comp] ## is a named vector
+    # if(!dat %in% names(spls.obj)){
+    #   stop('invalid omic name')
+    # }
+    feas_genes <- colnames(spls.obj[[dat]])
+    feas_genes <- rep(0, length(feas_genes)) %>% set_names(feas_genes)
+
+    for (comp in comps){
+      feas_genes[selectVar(spls.obj, comp = comp)$Y$name] <- 1 ## is a named vector
+    }
+
   }
 
   if(!is.null(subset)){ ## if we want to enrich against a subset only
@@ -47,8 +46,8 @@ GOget <- function(spls.obj, dat, comp, ID="symbol", nodeSize=10,
     feas_genes <- feas_genes[subset]
   }
 
+  selection <- function(allScore){ return(allScore > 0)} # function that returns TRUE/FALSE
 
-  selection <- function(allScore){ return(allScore != 0)} # function that returns TRUE/FALSE
   allGO2genes <- annFUN.org(whichOnto="BP", feasibleGenes=names(feas_genes), mapping=mapping, ID=ID)
 
   GOdata <- new("topGOdata",
@@ -83,6 +82,7 @@ goEnrich<- function(GOdata, algorithm="classic", statistic="ks", topNodes=25){
   # goEnrichment$Term <- gsub(" [a-z]*\\.\\.\\.$", "", goEnrichment$Term)
   # goEnrichment$Term <- gsub("\\.\\.\\.$", "", goEnrichment$Term)
   # goEnrichment$Term <- paste(goEnrichment$GO.ID, goEnrichment$Term, sep=", ")
+  goEnrichment <- goEnrichment[!duplicated(goEnrichment$Term),]
   goEnrichment$Term <- factor(goEnrichment$Term, levels=rev(goEnrichment$Term))
   goEnrichment$KS <- as.numeric(goEnrichment$KS)
   return(goEnrichment)
@@ -94,19 +94,36 @@ goEnrich<- function(GOdata, algorithm="classic", statistic="ks", topNodes=25){
 #'
 #' @param goEnrichment matrix
 #' @param trms list of terms
-#' @param colz colors
+#' @param col colors
 #' @param ymax max of y in the plot
 #' @param minor minor grid
 #' @rdname goEnrich
 #' @export
-GOplot <- function(goEnrichment, minEnrich=0.5, trms, colz, ymax=max(-log10(goEnrichment$KS)), minor=0.5){
+GOplot <- function(goEnrichment, minEnrich=0.5, trms=list(regul='regul', tumor='tum'),
+                   col=NULL, ymax=max(-log10(goEnrichment$KS)), minor=0.5, maxEnrich=NULL){
+
+
+  if(is.null(col)){
+    ## different colors for terms list
+    cm <-  color.mixo(c(2,1,4,5))
+    col <-c('grey40', cm[seq_along(trms)])
+  }
+  ## first color for no match
+  if(length(col)!=(1+length(trms)))
+    stop("col of not correct length")
+
+
   goEnrichment <- goEnrichment[!is.na(goEnrichment[,3]),]
-  maxKS=10^(-minEnrich)
-  goEnrichment <- goEnrichment[goEnrichment$KS<maxKS,]
+
+  if(!is.null(maxEnrich)){
+    minKS <- 10^(-maxEnrich)
+    goEnrichment <- goEnrichment[goEnrichment$KS>=minKS,]
+  }
+
   ## plot
   ## function to create a vector of colors based on matching to a list of terms
-  col_match <- function(goEnrichment, trms,colz){
-    trm_col <- rep(colz[1],  dim(goEnrichment)[1])
+  col_match <- function(goEnrichment, trms,col){
+    trm_col <- rep(col[1],  dim(goEnrichment)[1])
     for (i in seq_along(trms)){
       trm <- trms[[i]]
       trm_match <- vector(length = dim(goEnrichment)[1])
@@ -114,13 +131,14 @@ GOplot <- function(goEnrichment, minEnrich=0.5, trms, colz, ymax=max(-log10(goEn
         trm_match <- trm_match| grepl(tm, goEnrichment$Term)
       }
       trm_match <- rev(trm_match)
-      trm_col[trm_match] <- colz[i+1]
+      trm_col[trm_match] <- col[i+1]
     }
     trm_col
   }
 
-  trm_col <- col_match(goEnrichment, trms, colz)
+  trm_col <- col_match(goEnrichment, trms, col)
   # highlight <- rev(highlight)
+
   p <- ggplot(goEnrichment, aes(x=Term, y=-log10(KS))) +
     stat_summary(geom = "bar", fun.y = mean, position = "dodge", fill=trm_col) +
     xlab("") +
