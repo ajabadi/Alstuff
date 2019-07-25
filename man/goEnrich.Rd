@@ -6,7 +6,7 @@
 \alias{GOplot}
 \title{GO enrichment}
 \usage{
-GOget(spls.obj, dat, comps = 1:2, ID = "symbol", nodeSize = 10,
+GOget(spls.obj, dat, comp, ID = "symbol", nodeSize = 10,
   mapping = "org.Mm.eg.db", subset = NULL, feas_genes = NULL)
 
 goEnrich(GOdata, algorithm = "classic", statistic = "ks",
@@ -15,12 +15,14 @@ goEnrich(GOdata, algorithm = "classic", statistic = "ks",
 GOplot(goEnrichment, minEnrich = 0.5, trms = list(regul = "regul",
   tumor = "tum"), col = NULL, ymax = max(-log10(goEnrichment$KS)),
   minor = 0.5, maxEnrich = NULL)
+
 }
 \arguments{
 \item{spls.obj}{spls or diablo}
 
 \item{dat}{markers <- selectVar(spls.obj, comp = comp)[\link{dat}]$value}
 
+\item{comp}{PLS component}
 \item{ID}{"symbol" or "ensembl"}
 
 \item{nodeSize}{5-10 is good}
