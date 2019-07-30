@@ -1,17 +1,20 @@
 #' Wrapper for Hmisc::wtd.stats
 #'
-#' A detailed description
+#' @title Weighted stats
 #' @author Frank Harrell , Benjamin Tyner
-#' @title weighted variance with NA's
 #' @param x numeric vector possibly with missing values
 #' @param weights numeric vector pof weights possibly with missing values
+#' @param normwt normalise weights?
+#' @param na.rm na.rm?
+#' @param method one of c("unbiased", "ML")
 #' @import stats
 #' @importFrom stats cov.wt
-#' @export wtd_var
-#' @export wtd_mean
 #' @references \url{https://github.com/harrelfe/Hmisc/blob/master/man/wtd.stats.Rd}
 #' @family stats
-### Weighted Variance
+#' @return a numeric scalar
+#'
+#'@rdname wtd_stats
+#' @export
 wtd_var <- function (x, weights = NULL, normwt = FALSE, na.rm = TRUE, method = c("unbiased",
                                                                                  "ML"))
 {
@@ -37,7 +40,8 @@ wtd_var <- function (x, weights = NULL, normwt = FALSE, na.rm = TRUE, method = c
   return(sum(weights * ((x - xbar)^2))/(sw - 1))
 }
 
-### Weighted Mean
+#'@rdname wtd_stats
+#' @export
 wtd_mean <- function (x, weights = NULL, normwt = "ignored", na.rm = TRUE)
 {
   if (!length(weights))
@@ -48,4 +52,10 @@ wtd_mean <- function (x, weights = NULL, normwt = "ignored", na.rm = TRUE)
     weights <- weights[s]
   }
   return(sum(weights * x)/sum(weights))
+}
+
+#'@rdname wtd_stats
+#'@export
+gm_mean = function(x, na.rm=TRUE){
+  exp(sum(log(x[x > 0]), na.rm=na.rm) / length(x))
 }

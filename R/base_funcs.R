@@ -2,14 +2,20 @@
 #'
 #' Handles auto-renaming and overwrite checks. Useful when multiple files are being generated using different parameters. No need to do a lot of sprints's.
 #' Also prevents unwanted overwrite. If suffix='auto', it'll number them.
-#'@title cutom saveRDS
-#'@author Al J Abadi, \email{aljalabadi@@gmail.com}
-#'@param file full/relative path to the file name
-#'@param suffix descriptional suffix to add
-#'@return file name modified by suffix
-#'@family file
-#'@rdname basefuncs
-#'@export
+#' @title cutom saveRDS
+#' @author Al J Abadi, \email{aljalabadi@@gmail.com}
+#'
+#' @param file full/relative path to the file name
+#' @param object object to save
+#' @param force force replace?
+#' @param log a message for log file in __log directory
+#' @param ... args passed to saveRDS
+#' @param suffix descriptional suffix to add
+#'
+#' @return file name modified by suffix
+#' @family file
+#' @rdname basefuncs
+#' @export
 saveRDS2 <- function(object, file, force=FALSE, suffix=NULL, log=NULL, ...){
   file_sfx <- file
   ## if file aleardy exists and no forcing asked  ---------------------------------------
@@ -47,14 +53,16 @@ saveRDS2 <- function(object, file, force=FALSE, suffix=NULL, log=NULL, ...){
 }
 
 
-#'@title cutom png in figure folder
-#'@importFrom R.utils filePath
-#'@rdname basefuncs
-#'@export
-png2 <- function(file, fig_dir='figure/', height = 1000, width = 1000, res=200,...) png(filePath(fig_dir, paste0(file,'.png')), ...)
+#' @title custom png in figure folder
+#' @importFrom R.utils filePath
+#' @param figdir figure directory
+#' @rdname basefuncs
+#' @export
+png2 <- function(file, fig_dir='figure/',...) png(filePath(fig_dir, paste0(file,'.png')), ...)
 
-#'@title cutom pdf in figure folder
-#'@importFrom R.utils filePath
-#'@rdname basefuncs
-#'@export
+#' @title custom pdf in figure folder
+#' @importFrom R.utils filePath
+#' @param figdir figure directory
+#' @rdname basefuncs
+#' @export
 pdf2 <- function(file, fig_dir='figure/',...) pdf(filePath(fig_dir, paste0(file,'.pdf')), ...)

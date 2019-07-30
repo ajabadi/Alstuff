@@ -8,15 +8,26 @@
 \usage{
 saveRDS2(object, file, force = FALSE, suffix = NULL, log = NULL, ...)
 
-png2(file, fig_dir = "figure/", height = 1000, width = 1000,
-  res = 200, ...)
+png2(file, fig_dir = "figure/", ...)
 
 pdf2(file, fig_dir = "figure/", ...)
 }
 \arguments{
+\item{object}{object to save}
+
 \item{file}{full/relative path to the file name}
 
+\item{force}{force replace?}
+
 \item{suffix}{descriptional suffix to add}
+
+\item{log}{a message for log file in __log directory}
+
+\item{...}{args passed to saveRDS}
+
+\item{figdir}{figure directory}
+
+\item{figdir}{figure directory}
 }
 \value{
 file name modified by suffix

@@ -8,7 +8,8 @@
 #' @export saveName
 #'
 #' @examples
-#' saveName(dir='./img', basename='ggplot-of-data', args=list(alpha=5, beta=3), ext='pdf', spec='gamma-fixed')
+# saveName(dir='./img', basename='ggplot-of-data',
+#          args=list(alpha=5, beta=3), ext='pdf', spec='gamma-fixed')
 saveName <- function(dir='./img', basename, args, ext='pdf', spec=NULL){
   ## ensure dir does not have trailing slash
   gsub('/$','', dir)

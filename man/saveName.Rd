@@ -19,6 +19,3 @@ a string
 \description{
 Name for output file
 }
-\examples{
-saveName(dir='./img', basename='ggplot-of-data', args=list(alpha=5, beta=3), ext='pdf', spec='gamma-fixed')
-}

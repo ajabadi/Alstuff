@@ -21,7 +21,8 @@ Create\code{n} equally spaced hues around the color wheel (ggplot style)
 \examples{
 library(ggplot2)
 N <- nlevels(factor(mtcars$carb))
-ggplot2::ggplot(mtcars, aes(wt, disp, col=factor(carb))) + geom_point() +
+ggplot(mtcars, aes(wt, disp, col=factor(carb))) +
+  geom_point() +
   scale_color_manual(values = gg_color_hue(N))
 }
 \seealso{

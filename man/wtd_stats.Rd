@@ -2,27 +2,36 @@
 % Please edit documentation in R/wtd_stats.R
 \name{wtd_var}
 \alias{wtd_var}
-\title{weighted variance with NA's}
+\alias{wtd_mean}
+\alias{gm_mean}
+\title{Weighted stats}
 \usage{
 wtd_var(x, weights = NULL, normwt = FALSE, na.rm = TRUE,
   method = c("unbiased", "ML"))
+
+wtd_mean(x, weights = NULL, normwt = "ignored", na.rm = TRUE)
+
+gm_mean(x, na.rm = TRUE)
 }
 \arguments{
 \item{x}{numeric vector possibly with missing values}
 
 \item{weights}{numeric vector pof weights possibly with missing values}
+
+\item{normwt}{normalise weights?}
+
+\item{na.rm}{na.rm?}
+
+\item{method}{one of c("unbiased", "ML")}
+}
+\value{
+a numeric scalar
 }
 \description{
 Wrapper for Hmisc::wtd.stats
 }
-\details{
-A detailed description
-}
 \references{
 \url{https://github.com/harrelfe/Hmisc/blob/master/man/wtd.stats.Rd}
-}
-\seealso{
-Other stats: \code{\link{gm_mean}}
 }
 \author{
 Frank Harrell , Benjamin Tyner

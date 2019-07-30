@@ -3,10 +3,10 @@ Type: Package
 Title: My personal functions and wrappers
 Version: 0.1.0
 Author: Al J Abadi
-Maintainer: Al J Abadi <yaljabadi@gmail.com>
+Maintainer: Al J Abadi <aljalabadi@gmail.com>
 Description: Extensive range of function and wrappers for data analysis etc.
-Depends: R (>= 3.5.0)
-Imports: tools, grDevices
+Depends: R (>= 3.5.0), magrittr, ggplot2
+Imports: tools, grDevices, R.utils, data.tree, plyr, rstudioapi, stringr,topGO, xlsx
 Suggests: knitr, testthat, rmarkdown
 License: GPL-3
 Encoding: UTF-8
