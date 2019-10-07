@@ -40,9 +40,9 @@ Handles auto-renaming and overwrite checks. Useful when multiple files are being
 Also prevents unwanted overwrite. If suffix='auto', it'll number them.
 }
 \seealso{
-Other file: \code{\link{R2Excel}},
-  \code{\link{check_files_exist}}, \code{\link{dirTree}},
-  \code{\link{file_backup}}, \code{\link{move_symlink}},
+Other file: \code{\link{check_files_exist}},
+  \code{\link{dirTree}}, \code{\link{file_backup}},
+  \code{\link{move_symlink}},
   \code{\link{parent_base_ext}}, \code{\link{suffixer}}
 }
 \author{
