@@ -19,7 +19,7 @@ check input/ouput file/directories are valid
 \dontrun{check_files-exist(list('~/.Rprofile'))}
 }
 \seealso{
-Other file: \code{\link{R2Excel}}, \code{\link{dirTree}},
+Other file: \code{\link{dirTree}},
   \code{\link{file_backup}}, \code{\link{move_symlink}},
   \code{\link{parent_base_ext}}, \code{\link{saveRDS2}},
   \code{\link{suffixer}}
