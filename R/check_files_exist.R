@@ -15,5 +15,7 @@ check_files_exist <- function(io_list){
   ## flatten the list
   io_flat <- as.list(unlist(io_list, recursive=TRUE))
   non_exist <- io_flat  %>% .[!unlist(lapply(., file.exists))]
-  if(length(non_exist)) stop (paste0('could not find the following file(s): \n', non_exist))
+  if (length(non_exist))
+    stop(paste0('could not find the following file(s): \n',
+                paste0(non_exist, collapse = " \n")))
 }
