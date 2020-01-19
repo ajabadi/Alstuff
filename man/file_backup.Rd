@@ -4,10 +4,13 @@
 \alias{file_backup}
 \title{backup files - usually data files before being overwritten}
 \usage{
-file_backup(file, where = "/Volumes/0414861919/Mac_backup",
+file_backup(
+  file,
+  where = "/Volumes/0414861919/Mac_backup",
   date_ext = c("year", "month", "day"),
   run_spec = "Description of the latest changes you made",
-  toplevel = NA)
+  toplevel = NA
+)
 }
 \arguments{
 \item{file}{The file to be recorded - relative or full path - assumes it's a full path only if it starts with '/'.}
@@ -33,10 +36,13 @@ Backs up in either 1../__backup folder or
 3. in another (external hard drive) folder
 }
 \seealso{
-Other file: \code{\link{check_files_exist}},
-  \code{\link{dirTree}}, \code{\link{move_symlink}},
-  \code{\link{parent_base_ext}}, \code{\link{saveRDS2}},
-  \code{\link{suffixer}}
+Other file: 
+\code{\link{check_files_exist}()},
+\code{\link{dirTree}()},
+\code{\link{move_symlink}()},
+\code{\link{parent_base_ext}()},
+\code{\link{saveRDS2}()},
+\code{\link{suffixer}()}
 }
 \author{
 Al J Abadi, \email{aljalabadi@gmail.com}

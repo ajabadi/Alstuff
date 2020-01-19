@@ -21,6 +21,7 @@ a data.frame containing successfull and failed/non-installation info
 Install a list of packages in R
 }
 \seealso{
-Other misc: \code{\link{insertInAddin}}
+Other misc: 
+\code{\link{insertInAddin}()}
 }
 \concept{misc}

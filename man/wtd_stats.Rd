@@ -6,8 +6,13 @@
 \alias{gm_mean}
 \title{Weighted stats}
 \usage{
-wtd_var(x, weights = NULL, normwt = FALSE, na.rm = TRUE,
-  method = c("unbiased", "ML"))
+wtd_var(
+  x,
+  weights = NULL,
+  normwt = FALSE,
+  na.rm = TRUE,
+  method = c("unbiased", "ML")
+)
 
 wtd_mean(x, weights = NULL, normwt = "ignored", na.rm = TRUE)
 

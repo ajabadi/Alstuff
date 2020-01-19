@@ -19,6 +19,7 @@ Go to Tools > 'Modify Keybaord Shortcuts' toadd custom shortcuts after installin
 \url{https://rstudio.github.io/rstudioaddins/}
 }
 \seealso{
-Other misc: \code{\link{install_pkgs}}
+Other misc: 
+\code{\link{install_pkgs}()}
 }
 \concept{misc}

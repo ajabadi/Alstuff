@@ -18,10 +18,13 @@ file name modified by suffix
 Add a suffix to a file name. Could be full path.
 }
 \seealso{
-Other file: \code{\link{check_files_exist}},
-  \code{\link{dirTree}}, \code{\link{file_backup}},
-  \code{\link{move_symlink}},
-  \code{\link{parent_base_ext}}, \code{\link{saveRDS2}}
+Other file: 
+\code{\link{check_files_exist}()},
+\code{\link{dirTree}()},
+\code{\link{file_backup}()},
+\code{\link{move_symlink}()},
+\code{\link{parent_base_ext}()},
+\code{\link{saveRDS2}()}
 }
 \author{
 Al J Abadi, \email{aljalabadi@gmail.com}

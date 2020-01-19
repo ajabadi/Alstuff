@@ -26,7 +26,8 @@ ggplot(mtcars, aes(wt, disp, col=factor(carb))) +
   scale_color_manual(values = gg_color_hue(N))
 }
 \seealso{
-Other plot: \code{\link{hist_cut_color}}
+Other plot: 
+\code{\link{hist_cut_color}()}
 }
 \author{
 Al J Abadi, \email{aljalabadi@gmail.com}

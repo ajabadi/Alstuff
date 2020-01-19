@@ -3,6 +3,7 @@
 export(BiocUpdateAll)
 export(check_files_exist)
 export(dirTree)
+export(file.create.unique)
 export(file_backup)
 export(gg_color_hue)
 export(gm_mean)

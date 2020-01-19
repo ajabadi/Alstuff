@@ -16,7 +16,7 @@
 parent_base_ext <- function(filePath){
 
   file_dir <- dirname(filePath)
-  file_name <- sub("^([^.]*).*", "\\1",basename(filePath))
-  file_ext<- tools::file_ext(filePath)
-  return(list(parent=file_dir, base=file_name, ext=file_ext))
+  file_name <- tools::file_path_sans_ext(basename(filePath))
+  file_ext <- tools::file_ext(filePath)
+  return(list(parent = file_dir, base = file_name, ext = file_ext))
 }

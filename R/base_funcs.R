@@ -65,4 +65,4 @@ png2 <- function(file, fig_dir='figure/',...) png(filePath(fig_dir, paste0(file,
 #' @param figdir figure directory
 #' @rdname basefuncs
 #' @export
-pdf2 <- function(file, fig_dir='figure/',...) pdf(filePath(fig_dir, paste0(file,'.pdf')), ...)
+pdf2 <- function(file, fig_dir='figure/', ...) pdf(filePath(fig_dir, paste0(file,'.pdf')), ...)

@@ -26,8 +26,6 @@ pdf2(file, fig_dir = "figure/", ...)
 \item{...}{args passed to saveRDS}
 
 \item{figdir}{figure directory}
-
-\item{figdir}{figure directory}
 }
 \value{
 file name modified by suffix
@@ -40,10 +38,13 @@ Handles auto-renaming and overwrite checks. Useful when multiple files are being
 Also prevents unwanted overwrite. If suffix='auto', it'll number them.
 }
 \seealso{
-Other file: \code{\link{check_files_exist}},
-  \code{\link{dirTree}}, \code{\link{file_backup}},
-  \code{\link{move_symlink}},
-  \code{\link{parent_base_ext}}, \code{\link{suffixer}}
+Other file: 
+\code{\link{check_files_exist}()},
+\code{\link{dirTree}()},
+\code{\link{file_backup}()},
+\code{\link{move_symlink}()},
+\code{\link{parent_base_ext}()},
+\code{\link{suffixer}()}
 }
 \author{
 Al J Abadi, \email{aljalabadi@gmail.com}

@@ -4,10 +4,15 @@
 \alias{hist_cut_color}
 \title{Histogram color partitioner}
 \usage{
-hist_cut_color(vec = rnorm(2000, mean = 0, sd = 10), cutoff = c(-10,
-  -3, 3, 10), cols = c("red", "green", "orange", "yellow", "purple"),
-  legend_title = "QC", legend_labels = c("Filtered", "Passed",
-  "orange", "yellow", "purple"), n_bins = 200, ...)
+hist_cut_color(
+  vec = rnorm(2000, mean = 0, sd = 10),
+  cutoff = c(-10, -3, 3, 10),
+  cols = c("red", "green", "orange", "yellow", "purple"),
+  legend_title = "QC",
+  legend_labels = c("Filtered", "Passed", "orange", "yellow", "purple"),
+  n_bins = 200,
+  ...
+)
 }
 \arguments{
 \item{vec}{a numeric vector}
@@ -37,7 +42,8 @@ Partition histogram by color - output is a ggplot2 object which can be extended 
 hist_cut_color() + labs(x='X label here', title='Main title here')
 }
 \seealso{
-Other plot: \code{\link{gg_color_hue}}
+Other plot: 
+\code{\link{gg_color_hue}()}
 }
 \author{
 Al J Abadi, \email{aljalabadi@gmail.com}

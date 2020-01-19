@@ -4,8 +4,11 @@
 \alias{move_symlink}
 \title{file transferer}
 \usage{
-move_symlink(path = "/Users/alabadi/Downloads/trash",
-  external = "/Volumes/0414861919/Mac_Home", home = "/Users/alabadi")
+move_symlink(
+  path = "/Users/alabadi/Downloads/trash",
+  external = "/Volumes/0414861919/Mac_Home",
+  home = "/Users/alabadi"
+)
 }
 \arguments{
 \item{path}{full path to the file/folder (~ not allowed)}
@@ -21,10 +24,13 @@ copies the files folder in a replicate directory in external and symlinks
 Move a file/folder to external drive in similar external directory and create a symlink in local
 }
 \seealso{
-Other file: \code{\link{check_files_exist}},
-  \code{\link{dirTree}}, \code{\link{file_backup}},
-  \code{\link{parent_base_ext}}, \code{\link{saveRDS2}},
-  \code{\link{suffixer}}
+Other file: 
+\code{\link{check_files_exist}()},
+\code{\link{dirTree}()},
+\code{\link{file_backup}()},
+\code{\link{parent_base_ext}()},
+\code{\link{saveRDS2}()},
+\code{\link{suffixer}()}
 }
 \author{
 Al J Abadi, \email{aljalabadi@gmail.com}
