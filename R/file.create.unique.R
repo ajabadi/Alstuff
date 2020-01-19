@@ -4,6 +4,8 @@
 #'
 #' @return NULL
 #' @export
+#' @examples
+#' \dontrun{file.create.unique('~/.Rprofile')}
 #'
 file.create.unique <- function(filePath) {
   file.base <- parent_base_ext(filePath)$base

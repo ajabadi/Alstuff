@@ -10,6 +10,6 @@ BiocUpdateAll()
 Update all packages
 }
 \examples{
-\deontrun{BiocUpdateAll()}
+\dontrun{BiocUpdateAll()}
 
 }

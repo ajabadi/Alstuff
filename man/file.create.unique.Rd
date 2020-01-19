@@ -12,3 +12,7 @@ file.create.unique(filePath)
 \description{
 base::file.create which ensures exisiting files are indexed
 }
+\examples{
+\dontrun{file.create.unique('~/.Rprofile')}
+
+}
