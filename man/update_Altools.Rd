@@ -4,7 +4,10 @@
 \alias{update_Altools}
 \title{Update the package from github}
 \usage{
-update_Altools()
+update_Altools(force = TRUE)
+}
+\arguments{
+\item{force}{Logical, force re-install?}
 }
 \description{
 Update the package from github
