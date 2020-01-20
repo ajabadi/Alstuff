@@ -18,5 +18,10 @@ file.create.unique <- function(filePath) {
     cat(sprintf("Trying to create %s \n", filePath))
     i <- i + 1
   }
-  file.create(filePath)
+  succ <- file.create(filePath)
+
+  if (succ) {
+    cat(sprintf("%s was successfully created", filePath))
+  }
+  return(filePath)
 }
