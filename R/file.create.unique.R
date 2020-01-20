@@ -8,20 +8,22 @@
 #' \dontrun{file.create.unique('~/.Rprofile')}
 #'
 file.create.unique <- function(filePath) {
-  file.base <- parent_base_ext(filePath)$base
-  all.files <- list.files(dirname(filePath))
+  file.base <- basename(filePath)
+  all.files.base <- list.files(dirname(filePath))
   i <- 1
-  original.name <- filePath
-  while (filePath %in% all.files) {
-    cat(sprintf("%s exists.", filePath))
-    filePath <- gsub(x = original.name, pattern = file.base, replacement = sprintf("%s-%s", file.base, i))
-    cat(sprintf("Trying to create %s \n", filePath))
+  original.file.full <- filePath
+  while (file.base %in% all.files.base) {
+    cat(sprintf("%s already exists.", filePath))
+    file.name <- tools::file_path_sans_ext(basename(filePath))
+    filePath <- gsub(x = original.file.full, pattern = file.name, replacement = sprintf("%s-%s", file.base, i))
+    file.base <- basename(filePath)
+    cat(sprintf("Trying to create %s ... \n", filePath))
     i <- i + 1
   }
   succ <- file.create(filePath)
 
   if (succ) {
-    cat(sprintf("%s was successfully created", filePath))
+    cat(sprintf("%s was successfully created\n", filePath))
   }
   return(filePath)
 }
