@@ -2,15 +2,18 @@
 % Please edit documentation in R/file.create.unique.R
 \name{file.create.unique}
 \alias{file.create.unique}
-\title{base::file.create which ensures exisiting files are indexed}
+\title{base::file.create which ensures exisiting files are indexed and not overwritten}
 \usage{
 file.create.unique(filePath)
 }
 \arguments{
 \item{filePath}{Character, path to the file}
 }
+\value{
+Full path to the file to be created.
+}
 \description{
-base::file.create which ensures exisiting files are indexed
+base::file.create which ensures exisiting files are indexed and not overwritten
 }
 \examples{
 \dontrun{file.create.unique('~/.Rprofile')}
