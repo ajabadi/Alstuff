@@ -1,8 +1,8 @@
-#' base::file.create which ensures exisiting files are indexed
+#' base::file.create which ensures exisiting files are indexed and not overwritten
 #'
 #' @param filePath Character, path to the file
 #'
-#' @return NULL
+#' @return Full path to the file to be created.
 #' @export
 #' @examples
 #' \dontrun{file.create.unique('~/.Rprofile')}
