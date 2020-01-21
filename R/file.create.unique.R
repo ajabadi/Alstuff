@@ -29,7 +29,3 @@ file.create.unique <- function(filePath) {
   }
   return(final.file.full)
 }
-
-file.create.unique('README.md')
-file.create.unique("tests/manual/test_file_backup.R")
-file.create.unique("/Users/alabadi/Projects/dev/R/my/utils/Altools/README.md")
