@@ -8,22 +8,28 @@
 #' \dontrun{file.create.unique('~/.Rprofile')}
 #'
 file.create.unique <- function(filePath) {
-  file.base <- basename(filePath)
   all.files.base <- list.files(dirname(filePath))
-  i <- 1
   original.file.full <- filePath
-  while (file.base %in% all.files.base) {
-    cat(sprintf("%s already exists.", filePath))
-    file.name <- tools::file_path_sans_ext(basename(filePath))
-    filePath <- gsub(x = original.file.full, pattern = file.name, replacement = sprintf("%s-%s", file.base, i))
-    file.base <- basename(filePath)
-    cat(sprintf("Trying to create %s ... \n", filePath))
+  file.name <- tools::file_path_sans_ext(basename(filePath))
+
+  final.file.full <- filePath
+  final.file.base <- basename(filePath)
+  i <- 1
+  while (final.file.base %in% all.files.base) {
+    cat(sprintf("%s already exists.", final.file.full))
+    final.file.full <- gsub(x = original.file.full, pattern = file.name, replacement = sprintf("%s-%s", file.name, i))
+    final.file.base <- basename(final.file.full)
+    cat(sprintf("Trying to create %s ... \n", final.file.full))
     i <- i + 1
   }
-  succ <- file.create(filePath)
+  succ <- file.create(final.file.full)
 
   if (succ) {
-    cat(sprintf("%s was successfully created\n", filePath))
+    cat(sprintf("%s was successfully created\n", final.file.full))
   }
-  return(filePath)
+  return(final.file.full)
 }
+
+file.create.unique('README.md')
+file.create.unique("tests/manual/test_file_backup.R")
+file.create.unique("/Users/alabadi/Projects/dev/R/my/utils/Altools/README.md")
