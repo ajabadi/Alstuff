@@ -4,17 +4,30 @@
 \alias{dirTree}
 \title{create a tree of directories}
 \usage{
-dirTree(Dir, depth = 2, plot = FALSE)
+dirTree(
+  files = FALSE,
+  Dir = ".",
+  depth = 2,
+  exclude = c("^.git"),
+  plot = FALSE,
+  ...
+)
 }
 \arguments{
+\item{files}{whether to look for files. If FALSE, directories are listed.}
+
+\item{Dir}{character, the directory}
+
 \item{depth}{the depth of the tree}
+
+\item{exclude}{vector of regex characters to exclude}
 
 \item{plot}{whether to plot the tree as well - not used atm}
 
-\item{path}{the base directory}
+\item{...}{Other args passed to \code{list.dirs} or \code{list.files}}
 }
 \description{
-creates a dendogram of subdirectories down to a given depth. Plus a tree plot.
+creates a dendogram of subdirectories down to a given depth.
 }
 \seealso{
 Other file: 
