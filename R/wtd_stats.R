@@ -13,7 +13,7 @@
 #' @family stats
 #' @return a numeric scalar
 #'
-#'@rdname wtd_stats
+#' @rdname wtd_stats
 #' @export
 wtd_var <- function (x, weights = NULL, normwt = FALSE, na.rm = TRUE, method = c("unbiased",
                                                                                  "ML"))
@@ -40,7 +40,7 @@ wtd_var <- function (x, weights = NULL, normwt = FALSE, na.rm = TRUE, method = c
   return(sum(weights * ((x - xbar)^2))/(sw - 1))
 }
 
-#'@rdname wtd_stats
+#' @rdname wtd_stats
 #' @export
 wtd_mean <- function (x, weights = NULL, normwt = "ignored", na.rm = TRUE)
 {
@@ -54,8 +54,8 @@ wtd_mean <- function (x, weights = NULL, normwt = "ignored", na.rm = TRUE)
   return(sum(weights * x)/sum(weights))
 }
 
-#'@rdname wtd_stats
-#'@export
+#' @rdname wtd_stats
+#' @export
 gm_mean = function(x, na.rm=TRUE){
   exp(sum(log(x[x > 0]), na.rm=na.rm) / length(x))
 }
