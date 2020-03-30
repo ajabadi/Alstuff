@@ -1,11 +1,12 @@
 #' Get package version from DESCRIPTION's Version line
 #'
-#' @param dir Package directory
+#' @param dir Character, the package directory
+#' @param branch Character, the branch name
 #'
 #' @return Package's version as character x.y.z
 #' @export
 #' @family gitflow
-get_pkg_version <- function(dir = '.', branch = NULL) {
+get_package_version <- function(dir = '.', branch = NULL) {
     setwd(dir)
 
     if (!is.null(branch)) {

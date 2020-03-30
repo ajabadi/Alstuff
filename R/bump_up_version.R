@@ -1,18 +1,18 @@
 #' Bump up z in x.y.z for version number
 #'
-#' @param branch Name of branch to bump up
-#' @param dir Package directory
+#' @param dir Character, the package directory
+#' @param branch Character, the name of branch to bump up
 #'
 #' @return Updates the version number in \code{Version: x.y.z} line by one
 #' @export
 #' @family gitflow
-version_bumper <- function(branch = 'devel', dir = '.') {
+bump_up_version <- function(dir = '.', branch = 'devel') {
   on_target_branch <- TRUE
   if (!is.na(branch)) {
     on_target_branch <- system('git rev-parse --abbrev-ref HEAD', intern = TRUE) == branch
   }
   if (on_target_branch) {
-    version_line <- get_pkg_version(dir = dir)
+    version_line <- get_package_version(dir = dir)
     currVersion <- version_line$currVersion
     versionLine<- version_line$versionLine
 
