@@ -4,7 +4,7 @@
 \alias{get_pkg_version}
 \title{Get package version from DESCRIPTION's Version line}
 \usage{
-get_pkg_version(dir = ".")
+get_pkg_version(dir = ".", branch = NULL)
 }
 \arguments{
 \item{dir}{Package directory}
