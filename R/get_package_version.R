@@ -11,7 +11,12 @@ get_package_version <- function(dir = '.', branch = NULL) {
 
     if (!is.null(branch)) {
         ## stash changes & unstash upon exit after checkout to original branch
-        system(sprintf('git add .;git stash push -m "prestash"; git checkout %s', branch))
+        system("git add .")
+        ## uncommitted changes
+        if (length(system("git diff HEAD")) > 0) {
+            system(sprintf('git stash push -m "prestash"; git checkout %s', branch))
+        }
+
         on.exit(system(sprintf('git checkout -; git stash pop stash@\\{0\\}')))
     }
 
