@@ -12,6 +12,11 @@ bump_up_version <- function(dir = '.', branch = 'devel') {
     on_target_branch <- system('git rev-parse --abbrev-ref HEAD', intern = TRUE) == branch
   }
   if (on_target_branch) {
+
+    if (any(grepl(pattern = '+Version: ', x = system('git diff HEAD', intern = TRUE)))) {
+      message("Version number has been manually changed")
+      return(NULL)
+    }
     version_line <- get_package_version(dir = dir)
     currVersion <- version_line$currVersion
     versionLine<- version_line$versionLine
