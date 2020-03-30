@@ -1,7 +1,7 @@
 Package: Altools
 Type: Package
 Title: My personal functions and wrappers
-Version: 0.1.1
+Version: 0.1.2
 Author: Al J Abadi
 Maintainer: Al J Abadi <aljalabadi@gmail.com>
 Description: Extensive range of function and wrappers for data analysis etc.
@@ -12,4 +12,4 @@ License: GPL-3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 LazyData: true
-RoxygenNote: 7.0.2
+RoxygenNote: 7.1.0
