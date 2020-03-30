@@ -17,3 +17,8 @@ Updates the version number in \code{Version: x.y.z} line by one
 \description{
 Bump up z in x.y.z for version number
 }
+\seealso{
+Other gitflow: 
+\code{\link{get_pkg_version}()}
+}
+\concept{gitflow}
