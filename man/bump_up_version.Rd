@@ -4,7 +4,7 @@
 \alias{bump_up_version}
 \title{Bump up z in x.y.z for version number}
 \usage{
-bump_up_version(dir = ".", branch = "devel")
+bump_up_version(dir = ".", branches = c("devel"))
 }
 \arguments{
 \item{dir}{Character, the package directory}
@@ -15,7 +15,8 @@ bump_up_version(dir = ".", branch = "devel")
 Updates the version number in \code{Version: x.y.z} line by one
 }
 \description{
-Bump up z in x.y.z for version number
+From line starting with \code{Version: } in DESCRIPTION file in the desired
+branch, this function extracts the version number and increments it by one.
 }
 \seealso{
 Other gitflow: 
