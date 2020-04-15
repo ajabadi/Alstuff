@@ -22,3 +22,8 @@ Evaluate function formals in an environment
 \examples{
 eval_function_formals(rnorm)
 }
+\seealso{
+Other utils: 
+\code{\link{install_pkgs}()}
+}
+\concept{utils}

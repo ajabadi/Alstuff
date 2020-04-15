@@ -6,7 +6,7 @@
 #'
 #' @return Function formals are evaluated in the specified environment
 #' @export
-#'
+#' @family utils
 #' @examples
 #' eval_function_formals(rnorm)
 eval_function_formals <- function(fun, envir = .GlobalEnv, ...) {
