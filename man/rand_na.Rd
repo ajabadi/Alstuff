@@ -4,12 +4,14 @@
 \alias{rand_na}
 \title{Random NA inseration}
 \usage{
-rand_na(mat = matrix(1:100, ncol = 20), prop = 0.3)
+rand_na(mat = matrix(1:100, ncol = 20), prop = 0.3, seed = NULL)
 }
 \arguments{
-\item{mat}{a matrix, or data.frame}
+\item{mat}{Matrix, or data.frame of data}
 
-\item{prop}{proportion of NAs}
+\item{prop}{Numeric b/w 0 and 1, proportion of NAs}
+
+\item{seed}{Integer, seed number}
 }
 \value{
 matrix with NAs
