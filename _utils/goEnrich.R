@@ -18,8 +18,6 @@
 #' @import topGO
 #' @rdname goEnrich
 #' @return a GO term enrichment plot
-
-#'
 #' @export
 GOget <- function(spls.obj, dat, comps=1:2, ID="symbol", nodeSize=10,
                       mapping="org.Mm.eg.db", subset=NULL, feas_genes= NULL){
