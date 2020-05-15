@@ -23,6 +23,7 @@
 #' create_heatmap(low = 'green', high = 'purple')
 #' create_heatmap(low = 'yellow', high = 'grey50')
 #' create_heatmap(low = 'yellow', high = 'darkgreen')
+#' create_heatmap(low = '#6193f2', high = '0042bf')
 create_heatmap <-
   function(mat = matrix(rnorm(100), nrow = 20),
            low = '#a4eaff',
