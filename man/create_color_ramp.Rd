@@ -6,13 +6,16 @@
 \usage{
 create_color_ramp(
   col_range = c("red", "yellow", "springgreen", "royalblue"),
-  n = 30
+  n = 30,
+  plot = TRUE
 )
 }
 \arguments{
 \item{col_range}{Colors to transition from/to}
 
 \item{n}{Number of colors to create}
+
+\item{plot}{whether to plot the colors}
 }
 \value{
 A visual of colors and a character vector of colors
