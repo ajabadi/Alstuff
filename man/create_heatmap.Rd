@@ -52,5 +52,4 @@ create_heatmap(title = 'Example')
 create_heatmap(low = 'green', high = 'purple')
 create_heatmap(low = 'yellow', high = 'grey50')
 create_heatmap(low = 'yellow', high = 'darkgreen')
-create_heatmap(low = '#6193f2', high = '0042bf')
 }
