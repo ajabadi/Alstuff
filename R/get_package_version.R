@@ -1,12 +1,12 @@
-#' Get package version from DESCRIPTION's Version line
+#' Get package version and date info from DESCRIPTION
 #'
 #' @param dir Character, the package directory
 #' @param branch Character, the branch name
 #'
-#' @return Package's version as character x.y.z
-#' @export get_package_version
-#' @family gitflow
-get_package_version <- function(dir = '.', branch = NULL) {
+#' @return Package's version as character x.y.z and date line (if any)
+#' @export get_package_version_and_date
+#' @family git
+get_package_version_and_date <- function(dir = '.', branch = NULL) {
     owd <- getwd()
     setwd(dir)
     if (!is.null(branch)) {
@@ -29,8 +29,17 @@ get_package_version <- function(dir = '.', branch = NULL) {
     versionLine <- as.integer(versionLine)
     currVersion <- read.dcf("DESCRIPTION", fields = "Version")
     currVersion <- as.character(currVersion[1, "Version"])
+
+    has_Date <- FALSE
+    dateLine <- system("awk '/Date/{ print NR; exit }' DESCRIPTION", intern = TRUE)
+    dateLine <- as.integer(dateLine)
+    if (length(dateLine) != 0)
+    {
+        has_Date <- TRUE
+    }
+
     setwd(owd)
-    list(currVersion = currVersion, versionLine = versionLine)
+    list(currVersion = currVersion, versionLine = versionLine, has_Date = has_Date, dateLine = dateLine)
 }
 
 current_branch <- function()

@@ -2,24 +2,25 @@
 % Please edit documentation in R/bump_up_version.R
 \name{bump_up_version}
 \alias{bump_up_version}
-\title{Bump up z in x.y.z for version number}
+\title{Bump up z in x.y.z for version number and update the Date}
 \usage{
 bump_up_version(dir = ".", branches = c("devel"))
 }
 \arguments{
-\item{dir}{Character, the package directory}
+\item{dir}{Character, the package directory where DESCRIPTION is located}
 
 \item{branch}{Character, the name of branch to bump up}
 }
 \value{
-Updates the version number in \code{Version: x.y.z} line by one
+None
 }
 \description{
 From line starting with \code{Version: } in DESCRIPTION file in the desired
 branch, this function extracts the version number and increments it by one.
+It also writes to 'Date:' entry using today's date, if any.
 }
 \seealso{
-Other gitflow: 
-\code{\link{get_package_version}()}
+Other git: 
+\code{\link{get_package_version_and_date}()}
 }
-\concept{gitflow}
+\concept{git}
