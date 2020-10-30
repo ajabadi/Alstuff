@@ -3,6 +3,7 @@
 export(BiocUpdateAll)
 export(all_identical)
 export(bump_up_version)
+export(char_pretty)
 export(check_files_exist)
 export(compile_from_source)
 export(create_color_ramp)

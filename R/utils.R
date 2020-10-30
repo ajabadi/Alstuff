@@ -59,3 +59,19 @@ source_from_github <- function(repo="ajabadi/Altools", files = NULL) {
   Rfiles_raw <- file.path(src_rep, Rfiles, "?raw=TRUE")
   sapply(Rfiles_raw, devtools::source_url)
 }
+
+## ------------------------------------------------------------------------ ##
+#' character formatted with colour
+#'
+#' Can only be used with the \code{cat} function
+#'
+#' @param char character
+#'
+#' @return None
+#' @export
+#'
+#' @examples
+#' cat(sprintf("haha! this is %s", char_pretty('cool')))
+char_pretty <- function(char) {
+  sprintf("\033[33m'%s'\033[39m", char)
+}
