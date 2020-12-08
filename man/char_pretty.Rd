@@ -13,8 +13,8 @@ char_pretty(char)
 None
 }
 \description{
-character formatted with colour
+Can only be used with the \code{cat} function
 }
 \examples{
-cat(sprintf("haha! this is \%s cool", char_pretty('foo')))
+cat(sprintf("haha! this is \%s", char_pretty('cool')))
 }
