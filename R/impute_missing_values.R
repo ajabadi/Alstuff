@@ -9,10 +9,15 @@
 #' @return Imputed x
 #'
 #' @examples
-#' impute_by_means(matrix(c(1,2,3, NA,
-#'                          4,5,6, NA), byrow = FALSE, ncol=2))
+#' impute_missing_values()
+#' impute_missing_values(matrix(c(1,2,3, NA,
+#'                          4,5,6, NA),
+#'                          byrow = FALSE, ncol=2))
 #' @export
-impute_missing_values <- function(x, type = c('mean', 'median', 'knn'), ...) {
+impute_missing_values <- function(x = matrix(c(1:19,NA), ncol = 4),
+                                  type = c('mean', 'median', 'knn'),
+                                  ...) {
+  requireNamespace('impute')
   if (!is.matrix(x)) {
     stop("'x' must be a numeric matrix")
   }

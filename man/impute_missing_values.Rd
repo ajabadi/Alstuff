@@ -4,7 +4,11 @@
 \alias{impute_missing_values}
 \title{Impute missing values om columns by means/median}
 \usage{
-impute_missing_values(x, type = c("mean", "median", "knn"), ...)
+impute_missing_values(
+  x = matrix(c(1:19, NA), ncol = 4),
+  type = c("mean", "median", "knn"),
+  ...
+)
 }
 \arguments{
 \item{x}{A numeric matrix - features are columns}
@@ -21,6 +25,8 @@ For type = 'mean' por 'median', the corresponding values for columns
 are returned. For type = 'knn', \code{impute::knn} is used.
 }
 \examples{
-impute_by_means(matrix(c(1,2,3, NA,
-                         4,5,6, NA), byrow = FALSE, ncol=2))
+impute_missing_values()
+impute_missing_values(matrix(c(1,2,3, NA,
+                         4,5,6, NA),
+                         byrow = FALSE, ncol=2))
 }
