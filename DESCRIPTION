@@ -1,8 +1,8 @@
 Package: Altools
 Type: Package
 Title: My personal functions and wrappers
-Version: 0.1.98
-Date: 2021-03-23
+Version: 0.1.99
+Date: 2021-03-30
 Author: Al J Abadi
 Maintainer: Al J Abadi <aljalabadi@gmail.com>
 Description: Extensive range of function and wrappers for data analysis etc.
