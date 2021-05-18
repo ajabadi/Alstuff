@@ -10,7 +10,7 @@
 #' @param force force replace?
 #' @param log a message for log file in __log directory
 #' @param ... args passed to saveRDS
-#' @param suffix descriptional suffix to add
+#' @param suffix descriptive suffix to add
 #'
 #' @return file name modified by suffix
 #' @family file
@@ -18,9 +18,9 @@
 #' @export
 saveRDS2 <- function(object, file, force=FALSE, suffix=NULL, log=NULL, ...){
   file_sfx <- file
-  ## if file aleardy exists and no forcing asked  ---------------------------------------
+  ## if file already exists and no forcing asked  ---------------------------------------
   if(file.exists(file) & !force){
-    ## esnure suffix is valid
+    ## ensure suffix is valid
     if(!is(try(suffix), 'character')){
       stop(sprintf('You sure you want to overwrite %s?. Use force=TRUE to overwrite.', sQuote(file)), call. = FALSE)
     } else {

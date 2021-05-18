@@ -19,7 +19,7 @@ pdf2(file, fig_dir = "figure/", ...)
 
 \item{force}{force replace?}
 
-\item{suffix}{descriptional suffix to add}
+\item{suffix}{descriptive suffix to add}
 
 \item{log}{a message for log file in __log directory}
 
