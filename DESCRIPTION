@@ -1,14 +1,14 @@
 Package: Altools
 Type: Package
 Title: My personal functions and wrappers
-Version: 0.1.103
-Date: 2021-03-31
+Version: 0.2.2
+Date: 2021-05-18
 Author: Al J Abadi
 Maintainer: Al J Abadi <aljalabadi@gmail.com>
 Description: Extensive range of function and wrappers for data analysis etc.
 Depends: R (>= 3.5.0), magrittr, ggplot2
-Imports: tools, grDevices, R.utils, data.tree, plyr, stringr
-Suggests: knitr, testthat, rmarkdown
+Imports: tools, grDevices, R.utils, data.tree, plyr, stringr, testthat
+Suggests: knitr, rmarkdown
 License: GPL-3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
