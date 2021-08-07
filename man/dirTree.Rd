@@ -6,7 +6,7 @@
 \usage{
 dirTree(
   files = FALSE,
-  Dir = ".",
+  path = ".",
   depth = 2,
   exclude = c("^.git"),
   plot = FALSE,
@@ -16,7 +16,7 @@ dirTree(
 \arguments{
 \item{files}{whether to look for files. If FALSE, directories are listed.}
 
-\item{Dir}{character, the directory}
+\item{path}{character, the directory}
 
 \item{depth}{the depth of the tree}
 

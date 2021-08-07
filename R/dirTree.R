@@ -4,7 +4,7 @@
 #'
 #' @param files whether to look for files. If FALSE, directories are listed.
 #' @param depth the depth of the tree
-#' @param Dir character, the directory
+#' @param path character, the directory
 #' @param exclude vector of regex characters to exclude
 #' @param plot whether to plot the tree as well - not used atm
 #' @param ... Other args passed to \code{list.dirs} or \code{list.files}
@@ -13,14 +13,14 @@
 #' @importFrom plyr rbind.fill
 #' @family file
 #' @export
-dirTree <- function(files=FALSE, Dir=".", depth=2, exclude=c("^.git"), plot=FALSE, ...){
+dirTree <- function(files=FALSE, path=".", depth=2, exclude=c("^.git"), plot=FALSE, ...){
 
   formals(print)$row.names=FALSE
 
   if (files) {
-      ld <- list.files(path = Dir, recursive = TRUE, full.names = FALSE,  ...)
+      ld <- list.files(path = path, recursive = TRUE, full.names = FALSE,  ...)
   } else {
-      ld <- list.dirs(path = Dir, recursive = TRUE, full.names = FALSE, ...)[-1]
+      ld <- list.dirs(path = path, recursive = TRUE, full.names = FALSE, ...)[-1]
   }
 
 
@@ -35,7 +35,7 @@ dirTree <- function(files=FALSE, Dir=".", depth=2, exclude=c("^.git"), plot=FALS
     stop("No applicable directories", call. = FALSE)
 
   ld <- ld[sapply(ld, function(x) str_count(x, "/")<=depth)]
-  ld <- paste0(basename(Dir),"/",ld)
+  ld <- paste0(basename(path),"/",ld)
   x <- lapply(strsplit(ld, "/"), function(z) as.data.frame(t(z)))
   x <- rbind.fill(x)
   x$pathString <- apply(x, 1, function(x) paste(trimws(na.omit(x)), collapse="/"))
